@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="11.24">
-    <testcase classname="Used to create a new user" name="Success Response" time="10.425">
-        <system-out><![CDATA[Given Api kullanicisi "api/register" path parametreleri set eder............passed
-Then Register Customer icin gerekli Request Body "Ayse","Hoca","aysehoca","ay@gmail.com","1234.abc","1234.abc","customer","053621234567","44546545464546" hazirla.passed
-Then Register Customer icin Post request gonder.............................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="10.304">
+    <testcase classname="You can log in to the system with your email and password" name="Success Response" time="9.473">
+        <system-out><![CDATA[Given Api kullanicisi "api/login" path parametreleri set eder...............passed
+Then Login icin "email" ve "password" girilir...............................passed
+Then Login icin Post request gonderilir.....................................passed
 ]]></system-out>
     </testcase>
 </testsuite>
