@@ -8,6 +8,7 @@ import io.restassured.response.Response;
 import org.checkerframework.checker.units.qual.C;
 import org.json.JSONObject;
 import pojos.Pojo_RegisterCustomer;
+import utilities.Authentication;
 import utilities.ConfigReader;
 
 import static io.restassured.RestAssured.given;
@@ -113,7 +114,7 @@ public class CommonAPI {
     @Then("Login icin Post request gonderilir")
     public void loginIcinPostRequestGonderilir() {
 
-        Response response = given()
+       Response response = given()
                                     .spec(HooksAPI.spec)
                                     .contentType(ContentType.JSON)
                                     .header("Accept","application/json")
@@ -121,6 +122,23 @@ public class CommonAPI {
                                     .body(reqBodyJson.toString())
                                     .post(fullPath);
         response.prettyPrint();
+    }
+
+    @Then("AllCountries icin Get request gonderilir")
+    public void allcountriesIcinGetRequestGonderilir() {
+
+        Response response = given()
+                                .spec(HooksAPI.spec)
+                                .headers("Authorization", "Bearer " + HooksAPI.token)
+                                .contentType(ContentType.JSON)
+                                .header("Accept","application/json")
+                            .when()
+                                .get(fullPath);
+
+        response.prettyPrint();
+
+
+
 
     }
 }
