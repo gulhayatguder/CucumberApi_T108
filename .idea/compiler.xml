@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="T108_CucumberAPI" />
+        <module name="CucumberAPI" />
       </profile>
     </annotationProcessing>
   </component>
